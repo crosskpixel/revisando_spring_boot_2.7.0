@@ -1,0 +1,49 @@
+debug: false
+
+################## [SERVER] #################
+server:
+  port: 8080
+  compression:
+    enabled: true
+  servlet:
+    context-path: /
+################## [SPRING] #################
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_boot
+    username: postgres
+    password: postgres
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+################## [ APP] #################
+
+app:
+  environment: prod
+  security:
+    enabled: true
+  mail:
+    host: ${MAIL_HOST:123}
+    username: ${MAIL_USER:123}
+    password: ${MAIL_PASSWORD:123}
+    send:
+      from: email@email.com
+      suporte: email@email.com
+  crypto:
+    secret-key: hL23olBhsu&45ols40.kg&t@hso1-+s
+
+################## [SWAGGER] #################
+application-description: App
+application-version: '@project.version@'
+application-name: ${spring.application.name}
+
+info:
+  app:
+    name: '@project.name@'
+    description: '@project.description@'
+    version: '@project.version@'
+    encoding: '@project.encoding@'
+    java:
+      version: '@java.version@'

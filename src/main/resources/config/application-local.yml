@@ -1,0 +1,29 @@
+debug: false
+################## [SERVER] #################
+server:
+  port: 8080
+  compression:
+    enabled: true
+  servlet:
+    context-path: /
+################## [SPRING] #################
+spring:
+  devtools:
+    restart:
+      enabled: true
+  jpa:
+    show-sql: true
+
+################## [REVIZIA APP] #################
+app:
+  environment: local
+  security:
+    enabled: true
+
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: INFO

@@ -1,0 +1,17 @@
+debug: false
+
+################## [SPRING] #################
+spring:
+  datasource:
+    url: jdbc:postgresql://bd-productions.12312312id.sa-east-1.rds.amazonaws.com:5432/spring_boot
+################## [APP] #################
+
+app:
+  environment: prod
+
+################## [LOGGING] #################
+logging:
+  level:
+    ROOT: INFO
+    br.com.revizia.nextgen: INFO
+

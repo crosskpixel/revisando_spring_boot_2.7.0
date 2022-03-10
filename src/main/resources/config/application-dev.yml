@@ -1,0 +1,36 @@
+debug: false
+
+################## [SERVER] #################
+server:
+  port: 8080
+  compression:
+    enabled: true
+  servlet:
+    context-path: /
+################## [SPRING] #################
+spring:
+  main:
+    banner-mode: console
+    log-startup-info: true
+
+################## [APP] #################
+app:
+  environment: dev
+################## [LOGGING] #################
+
+logging:
+  level:
+    root: DEBUG
+    io.swagger.models.parameters.AbstractSerializableParameter: WARN
+    io.swagger.models.parameters: ERROR
+    org.springframework.core.env.PropertySourcesPropertyResolver: TRACE
+    org.springframework.boot.context.config.ConfigFileApplicationListener: DEBUG
+    br.com.revizia.fiscalintelligence: DEBUG
+    org.apache.http.wire: WARN
+    com.fasterxml.jackson.databind: WARN
+    org:
+      hibernate:
+        SQL: WARN
+      springframework:
+        security: DEBUG
+        
