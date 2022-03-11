@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 /**
  * @author Revizia Gestao e Analise de documentos
@@ -25,6 +26,7 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Usuario implements Serializable {
 
     @Id
@@ -66,5 +68,9 @@ public class Usuario implements Serializable {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "updated_by")
     private Usuario updatedBy;
+
+    @OneToMany(mappedBy="usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+    @EqualsAndHashCode.Exclude
+    private Set<Acesso> acessos;
 
 }

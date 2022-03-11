@@ -1,6 +1,14 @@
 debug: false
 
 ################## [SERVER] #################
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 server:
   port: 8080
   compression:
@@ -17,7 +25,11 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8081
+        url: [http://localhost:8081]
+        username: admin
+        password: admin
+  application:
+    name: '@project.name@'
 ################## [ APP] #################
 
 app:
@@ -47,3 +59,9 @@ info:
     encoding: '@project.encoding@'
     java:
       version: '@java.version@'
+
+logging:
+  file:
+    name: plain.log
+    max-history: 20
+    max-size: 20MB

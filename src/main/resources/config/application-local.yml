@@ -13,14 +13,11 @@ spring:
       enabled: true
   jpa:
     show-sql: true
-
-################## [REVIZIA APP] #################
+################## [APP] #################
 app:
   environment: local
   security:
     enabled: true
-
-
 logging:
   level:
     org:

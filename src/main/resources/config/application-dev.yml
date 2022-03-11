@@ -12,7 +12,6 @@ spring:
   main:
     banner-mode: console
     log-startup-info: true
-
 ################## [APP] #################
 app:
   environment: dev
@@ -21,16 +20,11 @@ app:
 logging:
   level:
     root: DEBUG
-    io.swagger.models.parameters.AbstractSerializableParameter: WARN
-    io.swagger.models.parameters: ERROR
     org.springframework.core.env.PropertySourcesPropertyResolver: TRACE
     org.springframework.boot.context.config.ConfigFileApplicationListener: DEBUG
-    br.com.revizia.fiscalintelligence: DEBUG
-    org.apache.http.wire: WARN
-    com.fasterxml.jackson.databind: WARN
+    com.application.web: DEBUG
     org:
       hibernate:
         SQL: WARN
       springframework:
         security: DEBUG
-        
