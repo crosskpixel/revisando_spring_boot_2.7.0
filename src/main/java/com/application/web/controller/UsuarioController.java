@@ -25,4 +25,9 @@ public class UsuarioController {
         return usuarioService.listarTodosUsuarios();
     }
 
+    @GetMapping("/todos")
+    public List<IdEmailUsuarioResponse> teste2() {
+        return usuarioService.listarTodosUsuarios();
+    }
+
 }
